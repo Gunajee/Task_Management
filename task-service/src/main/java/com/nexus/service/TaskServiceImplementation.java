@@ -65,10 +65,10 @@ public class TaskServiceImplementation implements TaskService{
     }
 
     @Override
-    public void deleteTask(Long id) throws Exception {
+    public String deleteTask(Long id) throws Exception {
         getTaskById(id);
         taskRepository.deleteById(id);
-
+        return id+" Task is Deleted Successfully";
     }
 
     @Override
